@@ -5,7 +5,9 @@
     <e p="C:\Users\1\Documents\Portex" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="BuildMaze.cs" t="Include" />
         <e p="MoveRunner.cs" t="Include" />
+        <e p="TriggerWin.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
