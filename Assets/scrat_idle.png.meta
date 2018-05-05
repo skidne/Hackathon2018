@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: f71b0d78dfdc048eba8cedb9b8569662
-=======
-guid: 050575dfe9b4bae4293ed95e24a53ead
->>>>>>> 9ceadf99d86d576805567c57a8da52fccadf4005
+guid: 46fab036682e34542bf9fe96e0dba5f8
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -36,25 +32,15 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
-<<<<<<< HEAD
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
-=======
     wrapU: 0
     wrapV: 0
     wrapW: 0
->>>>>>> 9ceadf99d86d576805567c57a8da52fccadf4005
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-<<<<<<< HEAD
-  spriteMeshType: 1
-=======
   spriteMeshType: 0
->>>>>>> 9ceadf99d86d576805567c57a8da52fccadf4005
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -72,16 +58,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-<<<<<<< HEAD
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-=======
-    maxTextureSize: 256
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -89,11 +69,10 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 256
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
->>>>>>> 9ceadf99d86d576805567c57a8da52fccadf4005
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,11 +84,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-<<<<<<< HEAD
-    spriteID: 31097329f84fb44ac886f1b1a0330754
-=======
-    spriteID: 081600d0930f1024495ace1294aa2e6d
->>>>>>> 9ceadf99d86d576805567c57a8da52fccadf4005
+    spriteID: 5973473564dfb4e44b42c35e5c28160c
     vertices: []
     indices: 
     edges: []
