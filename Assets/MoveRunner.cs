@@ -7,8 +7,11 @@ public class MoveRunner : MonoBehaviour
 {
 	// Use this for initialization
 
-	void Start () {
-		
+	public int speed;
+
+	void Start ()
+	{
+		speed = 5;
 	}
 
 	// Update is called once per frame
@@ -19,25 +22,25 @@ public class MoveRunner : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.W))
 		{
-			playerOne.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 3);
+			playerOne.GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed);
 			playerOne.transform.eulerAngles = new Vector3(0, 0, 0);
 		}
 		else if (Input.GetKey(KeyCode.A))
 		{
-				playerOne.GetComponent<Rigidbody2D>().velocity = new Vector2(-3, 0);
+				playerOne.GetComponent<Rigidbody2D>().velocity = new Vector2(-speed, 0);
 				playerOne.transform.eulerAngles = new Vector3(0, 0, 90);
 		}
 			
 			else if (Input.GetKey(KeyCode.S))
 		{
 
-			playerOne.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -3);
+			playerOne.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed);
 			playerOne.transform.eulerAngles = new Vector3(0, 0, 180);
 		}
 
 		else if (Input.GetKey(KeyCode.D))
 		{
-			playerOne.GetComponent<Rigidbody2D>().velocity = new Vector2(3, 0);
+			playerOne.GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0);
 			playerOne.transform.eulerAngles = new Vector3(0, 0, 270);
 		}
 		else
@@ -47,25 +50,25 @@ public class MoveRunner : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.UpArrow))
 		{
-			playerTwo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 3);
+			playerTwo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed);
 			playerTwo.transform.eulerAngles = new Vector3(0, 0, 0);
 		}
 		else if (Input.GetKey(KeyCode.LeftArrow))
 		{
-			playerTwo.GetComponent<Rigidbody2D>().velocity = new Vector2(-3, 0);
+			playerTwo.GetComponent<Rigidbody2D>().velocity = new Vector2(-speed, 0);
 			playerTwo.transform.eulerAngles = new Vector3(0, 0, 90);
 		}
 			
 		else if (Input.GetKey(KeyCode.DownArrow))
 		{
 
-			playerTwo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -3);
+			playerTwo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed);
 			playerTwo.transform.eulerAngles = new Vector3(0, 0, 180);
 		}
 
 		else if (Input.GetKey(KeyCode.RightArrow))
 		{
-			playerTwo.GetComponent<Rigidbody2D>().velocity = new Vector2(3, 0);
+			playerTwo.GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0);
 			playerTwo.transform.eulerAngles = new Vector3(0, 0, 270);
 		}
 		else
