@@ -7,19 +7,63 @@ public class MoveRunner : MonoBehaviour
 {
 	// Use this for initialization
 
+	public Sprite left;
+	public Sprite right;
+	public Sprite idle;
+
+	GameObject playerOne;
+	GameObject playerTwo;
+
 	public int speed;
+	public SpriteRenderer spriterender1;
+	public SpriteRenderer spriterender2;
 
 	void Start ()
 	{
+		playerOne = GameObject.Find("PlayerTwo");
+		playerTwo = GameObject.Find("PlayerOne");
+
+		spriterender1 = playerOne.GetComponent<SpriteRenderer>();
+		spriterender2 = playerTwo.GetComponent<SpriteRenderer>();
 		speed = 5;
 	}
 
 	// Update is called once per frame
+	int _skippedFrames;
 	void Update()
 	{
-		GameObject playerOne = GameObject.Find("PlayerOne");
-		GameObject playerTwo = GameObject.Find("PlayerTwo");
-
+		if (_skippedFrames >= 4)
+		{
+			_skippedFrames = 0;
+			if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+			{
+				if (spriterender1.sprite.name == left.name)
+				{
+					spriterender1.sprite = right;
+				}
+				else
+				{
+					spriterender1.sprite = left;
+				}
+			}
+			else
+			{
+				spriterender1.sprite = idle;
+			}
+			if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.LeftArrow)
+				|| Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.DownArrow))
+			{
+				if (spriterender2.sprite.name == left.name)
+					spriterender2.sprite = right;
+				else
+					spriterender2.sprite = left;
+			}
+			else
+				spriterender2.sprite = idle;
+		}
+		else
+			_skippedFrames++;
+		
 		if (Input.GetKey(KeyCode.W))
 		{
 			playerOne.GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed);
